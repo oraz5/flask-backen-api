@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for post in posts %}
+    {{post.id}}
+    {{post.title}}
+    {{post.content}}
+    {{post.date_posted}}
+    {{ url_for('static', filename='post_photo/' + post.image_file) }}
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,9 @@
+ {"regions": {
+    "Balkan" : [ "Balkanabat" , "Türkmenbaşy", "Serdar", "Magtymguly", "Bereket", "Esenguly", "Etrek"],
+    "Ahal" : ["Ak-bugday", "Babadaýhan", "Gökdepe", "Kaka", "Derweze", "Sarahs", "Tejen"],
+    "Mary" : [ "Altyn sähra", "Baýramaly", "Garagum", "Mary", "Murgap", "Serhetabat", "Tagtabazar"],
+    "Lebap" : ["Atamyrat", "Beýik Türkmenbaşy", "Birata", "Döwletli ", "Farap", "Galkynyş", "Garabekewül"],
+    "Daşoguz" : ["Akdepe", "Boldumsaz", "Görogly", "Gubadag ", "Gurbansoltan Eje", "Köneürgenç", "Ruhybelent", "Saparmyrat Nyýazow"],
+    "Aşgabat": ["Arçabil etraby", "Bagtyýarlyk etraby", "Berkararlyk etraby", "Çandybil etraby", "Köpetdag etraby"]
+ }
+}

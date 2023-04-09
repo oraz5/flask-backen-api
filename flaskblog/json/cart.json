@@ -1,0 +1,35 @@
+{ 
+    "cart":
+        [
+            {
+                "user_id": "4",
+                "sku_id": "2",
+                "quantity": "1"
+            },
+            {
+                "user_id": "4",
+                "sku_id": "3",
+                "quantity": "1"
+            },
+            {
+                "user_id": "4",
+                "sku_id": "4",
+                "quantity": "1"
+            },  
+            {
+                "user_id": "4",
+                "sku_id": "9",
+                "quantity": "3"
+            }, 
+            {
+                "user_id": "4",
+                "sku_id": "5",
+                "quantity": "1"
+            },
+            {
+                "user_id": "4",
+                "sku_id": "8",
+                "quantity": "2"
+            }
+        ]
+}

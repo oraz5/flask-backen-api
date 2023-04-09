@@ -1,0 +1,45 @@
+{
+    "users":
+  [
+    {
+        "username": "Super",
+        "password": "112211",
+        "email": "superadmin@plan.com",
+        "phone": "+99365777777",
+        "role": "SUPERADMIN",
+        "parent": "0",
+        "region": "5",
+        "photo": "static/user_photo/user1.jpeg"
+    },
+    {
+        "username": "Admin",
+        "password": "112211",
+        "email": "admin@plan.com",
+        "phone": "+99365788777",
+        "role": "ADMIN",
+        "parent": "1",
+        "region": "7",
+        "photo": "static/user_photo/user2.jpeg"
+    }, 
+    {
+        "username": "Admin2",
+        "password": "112211",
+        "email": "admin2@plan.com",
+        "phone": "+99365997777",
+        "role": "ADMIN",
+        "parent": "1",
+        "region": "5",
+        "photo": "static/user_photo/user3.jpeg"
+    },
+    {
+        "username": "user",
+        "password": "112211",
+        "email": "user@plan.com",
+        "phone": "+99365777755",
+        "role": "USER",
+        "parent": "2",
+        "region": "5",
+        "photo": "static/user_photo/user4.jpeg"
+    }
+  ]
+}

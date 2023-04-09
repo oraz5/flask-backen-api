@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+  <div class="col col-sm-auto">
+    <div class="content-section">
+      <form method="POST" action="/products">
+        <div class="form-group">
+            <p>Title: </p> <input name = "title" value="{{ request.form.search}}" type = "text" class="text">
+        </div>
+        <div class="form-group">
+            <p>Author: </p> <input name = "author" type = "text" class="text"> 
+        </div>
+        <div class="form-group">
+            <p>Post Date: </p> <input name = "date_posted" type = "text" class="text">
+        </div>
+        <input class="btn btn-success btn-sm mb-1" type=submit value=Search>
+    </form>
+    </div>
+  </div>
+
+ 
+  <div class="col-lg">
+    <table  style="table-layout:fixed;" class="gridtable"  id="Select-b">
+      <thead>
+        <tr>
+          <th scope="col" width="30px">#</th>
+          <th scope="col" width="300px">Product Name</th>
+          <th scope="col" width="500px">Description</th>
+          <th scope="col" width="100px">Owner</th>
+          <th scope="col" width="100px">Created Date</th>
+          <th scope="col" width="100px">Category</th>
+          <th scope="col" width="100px">Quantity</th>
+          <th scope="col" width="100px">Price</th>
+          <th scope="col" width="100px">Image</th>
+          <th scope="col" width="100px">action</th>
+          <th scope="col" width="100px">status</th>
+        </tr>
+      </thead>
+     
+      <tbody>
+        {% for product in products.items %}
+        <tr> 
+          <td scope="row" >{{product.id}}</td>
+          <td id="appadd"><a href="{{ url_for('product', product_id=product.id) }}"> {{ product.product_name }}</a></td>
+          <td id="appadd">{{ product.description_tm }}</td>      
+          <td > {{ product.author.username }}</td>
+          <td>{{ product.create_ts.strftime('%d-%m-%Y') }}</td>
+          <td > {{ product.category.category_name_tm }}</td>
+          <td > {{ product.quantity }}</td>
+          <td > {{ product.price }}</td>
+          <td> 
+            {% if product.small_name %}
+            <img class="rounded-circle article-img" src="{{ product.small_name }}"> 
+            {% else %}
+            <small>NO image</small> 
+            {% endif %}
+          </td>
+          <td> 
+            <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_product', product_id=product.id) }}">Update</a>
+            <div>
+            <form action="{{ url_for('delete_product', product_id=product.id) }}" method="POST">
+              <input class="btn btn-danger btn-sm mb-1" type="submit" value="Delete">
+            </form>
+          </div>
+          </div>
+        </td>
+          <td>
+            <div class="form-group">
+            <form id="is_active" name="is_active" action="{{ url_for('activate_product', product_id=product.id) }}" method="POST">
+                <select title="{{ product.state  }}" id="activeSelect" name="is_active" onchange="this.form.submit()" required>
+                 {{ product.state  }}
+                  {% if product.state == True %}
+                    <option value="true">Activated</option>
+                    <option value="false">Disabled</option>
+                  {% else %}
+                    <option value="false">Disabled</option>
+                    <option value="true">Activated</option>
+                  {% endif %}
+                </select>
+              </div> 
+            </form>
+          </div>
+        </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="fixed-bottom mx-auto">
+      <div class="row justify-content-md-center">
+    {% for page_num in products.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+      {% if page_num %}
+        {% if products.page == page_num %}
+          <a class="btn btn-info mb-4" href="{{ url_for('products', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+          <a class="btn btn-outline-info mb-4" href="{{ url_for('products', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+      {% else %}
+        ...
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block endbody %} 
+  </div>
+    
+</div> 
+
+
+{% endblock %}

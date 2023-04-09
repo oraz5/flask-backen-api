@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="content-section">
+    <h1>Categories</h1>
+    {% for category in categories %}
+    {% if category.parent_category==0 %}
+    <div class="card" style="width: 18rem;display: inline-flex;
+    margin-left: 2em;">
+    <p>Main Category</p>
+      <img src="{{ category.category_icon }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{category.category_name_tm}}</h5>
+        <a href="{{url_for('products', category_id=category.id)}}" class="btn btn-primary"> {{category.category_name_tm}} in Products</a>
+      </div>
+    </div>
+    {% endif %} 
+    {% endfor %}
+  </div>
+    </div>
+</div>
+{% endblock %}

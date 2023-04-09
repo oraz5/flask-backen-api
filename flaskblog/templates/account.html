@@ -1,0 +1,24 @@
+ 
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="content-section">
+    <h1>{{ current_user.username }}</h1>
+    {% if userrole==current_user.role %} 
+    <a href="{{ url_for('create_user') }}"> Create User</a>
+    <a href="{{ url_for('new_category') }}" style="display: block;"> Create Category</a>
+    {% endif %}
+    <p>User Role: <a class="text-success">{{current_user.role}}</a></p>
+    <p>User Parent:  <a class="text-primary">{{current_user.parent}}</a></p>
+
+    <p>User Child: 
+        {% if child is not none %}
+            {%for chil in child%} 
+            <a class="text-info">{{chil.username}}</a>;
+            {%endfor%}
+        {% else %}
+        None
+        {% endif %}</p>
+    </div>
+</div>
+{% endblock content %}

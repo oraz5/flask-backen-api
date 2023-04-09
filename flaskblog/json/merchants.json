@@ -1,0 +1,90 @@
+{ 
+    "merchants":
+    [
+        {
+        "id": "1",
+        "region_id": "2",
+        "merchant_name" : "Magazin1",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "2",
+        "region_id": "2",
+        "merchant_name" : "Magazin2",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "3",
+        "region_id": "2",
+        "merchant_name" : "Magazin3",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "4",
+        "region_id": "2",
+        "merchant_name" : "Magazin4",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "5",
+        "region_id": "2",
+        "merchant_name" : "Magazin5",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "6",
+        "region_id": "2",
+        "merchant_name" : "Magazin6",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "7",
+        "region_id": "2",
+        "merchant_name" : "Magazin7",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "8",
+        "region_id": "2",
+        "merchant_name" : "Magazin8",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "9",
+        "region_id": "2",
+        "merchant_name" : "Magazin9",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "10",
+        "region_id": "2",
+        "merchant_name" : "Magazin10",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "11",
+        "region_id": "2",
+        "merchant_name" : "Magazin11",
+        "user_id": "1",
+        "user_access": "1"
+        },
+        {
+        "id": "12",
+        "region_id": "2",
+        "merchant_name" : "Magazin12",
+        "user_id": "1",
+        "user_access": "1"
+        }
+        
+    ]
+}

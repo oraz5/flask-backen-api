@@ -1,0 +1,47 @@
+{
+    "categories":
+  [
+    {
+        "category_name_tm": "Egin eşik",
+        "category_name_ru": "Одежда",
+        "parent_category": "0",
+        "category_image": "static/cat_image/1.png",
+        "category_icon": "static/cat_image/1icon.png"
+    },
+    {
+        "category_name_tm": "Aýakgap",
+        "category_name_ru": "Обувь",
+        "parent_category": "1",
+        "category_image": "static/cat_image/2.png",
+        "category_icon": "static/cat_image/2icon.png"
+    },
+    {
+        "category_name_tm": "Balak",
+        "category_name_ru": "Брюки",
+        "parent_category": "1",
+        "category_image": "static/cat_image/3.png",
+        "category_icon": "static/cat_image/3icon.png"
+    },
+    {
+        "category_name_tm": "Elektronika enjamlary",
+        "category_name_ru": "Электроника",
+        "parent_category": "0",
+        "category_image": "static/cat_image/4.png",
+        "category_icon": "static/cat_image/4icon.png"
+    },
+    {
+        "category_name_tm": "Noutbuklar",
+        "category_name_ru": "Ноутбуки",
+        "parent_category": "4",
+        "category_image": "static/cat_image/5.png",
+        "category_icon": "static/cat_image/5icon.png"
+    },
+    {
+        "category_name_tm": "Ykjam telefonlar",
+        "category_name_ru": "Смартфоны",
+        "parent_category": "4",
+        "category_image": "static/cat_image/6.png",
+        "category_icon": "static/cat_image/6icon.png"
+    }
+  ]
+}

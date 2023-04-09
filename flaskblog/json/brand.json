@@ -1,0 +1,91 @@
+{
+    "brands":
+  [
+    {
+        "brand_name": "LG",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/lg.png"
+    },
+    {
+        "brand_name": "beko",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/beko.png"
+    },
+    {
+        "brand_name": "Xiaomi",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/xiaomi.png"
+    },
+    {
+        "brand_name": "Samsung",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/samsung.png"
+    },
+    {
+        "brand_name": "Apple",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/apple.png"
+    },
+    {
+        "brand_name": "Asus",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/asus.png"
+    },
+    {
+        "brand_name": "Acer",
+        "brand_type": "Computer",
+        "brand_icon": "static/brand_image/acer.png"
+    },
+    {
+        "brand_name": "Intel",
+        "brand_type": "Computer",
+        "brand_icon": "static/brand_image/intel.png"
+    },
+    {
+        "brand_name": "Nvidia",
+        "brand_type": "Computer",
+        "brand_icon": "static/brand_image/nvidia.png"
+    },
+    {
+        "brand_name": "AMD",
+        "brand_type": "Computer",
+        "brand_icon": "static/brand_image/amd.png"
+    },
+    {
+        "brand_name": "Lenovo",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/lenovo.png"
+    },
+    {
+        "brand_name": "Philips",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/philips.png"
+    },
+    {
+        "brand_name": "Panasonic",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/panasonic.png"
+    },
+    {
+        "brand_name": "Sony",
+        "brand_type": "Electronic",
+        "brand_icon": "static/brand_image/sony.png"
+    },
+    {
+        "brand_name": "LC Waikiki",
+        "brand_type": "Clothes",
+        "brand_icon": "static/brand_image/lcwaikiki.png"
+    },
+    {
+        "brand_name": "koton",
+        "brand_type": "Clothes",
+        "brand_icon": "static/brand_image/koton.png"
+    },
+    {
+        "brand_name": "Pierre Cardin",
+        "brand_type": "Clothes",
+        "brand_icon": "static/brand_image/pierrecardin.png"
+    }
+    
+  ]
+}

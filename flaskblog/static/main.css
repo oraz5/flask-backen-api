@@ -1,0 +1,224 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel {
+    background-color: #5f788a;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #444444;
+   
+    text-align: center;
+  }
+
+  
+ 
+ 
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space:pre-line;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+
+  .appadd {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    text-overflow: ellipsis; 
+}
+
+#appadd {
+  max-width: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    text-overflow: ellipsis; 
+}
+
+table.gridtable {
+	
+	font-family: tahoma;
+	line-height:15px;
+	font-size:14px;
+	color:#333333;
+	border-width: 1px;
+ 
+  overflow: hidden;
+	border-color: #878a84dc;
+	border-collapse: collapse;
+	
+}
+table.gridtable th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #8a8d89ef;
+  color:#FFFFFF;
+  overflow: hidden;
+	background-color: #5f788a; /*#66CCFF*/
+	
+}
+table.gridtable td {
+  border-width: 0px 0px 1px 0px;
+  
+	border-style: solid;
+	border-bottom-color: #6666666b;
+  background-color: transparent;
+  overflow: hidden;
+	
+}
+
+#Select-b tbody tr:hover td 
+	{
+        background: none repeat scroll 0 0 #7AA9D8 /*#5A94CE*/; /*#9CF*/
+        color: #FFF;
+    }
+
+    .green {
+      color:green
+  }
+
+  .green {
+    color:red
+}
+
+.post_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 25%;
+  
+}
+.greenText{ background-color:rgb(89, 219, 89); }
+
+.redText{ background-color:rgb(231, 107, 107); }
+
+.fixed-bottom.mx-auto  {
+  position: relative;
+}
+
+.container .content-section .card{
+  display: inline-flex;
+    margin-left: 2em;
+}
+
+{box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+.order-item td{
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+{
+    "id":1,
+    "product_name": "kwadrat",
+    "description_tm": "Kwadrat",
+    "description_ru": "Kwadrat",
+    "image_file":{
+        "id": "1",
+        "large_name": "static/product_photo/1L.jpg",
+        "small_name": "static/product_photo/1S.jpg"
+    },
+    "options": {
+        "color_tm": "gara",
+        "color_ru": "черный",
+        "style_tm": "chino",
+        "style_ru": "chino",
+        "sizes": ["27/29","34/30","26/29","30/33","29/33"]
+    },
+    "Merchants":["1","5","12"],
+    "category_id":"3",
+    "user_id":"1",
+    "state": "True",
+    "count_viewed":"14",
+    "date_posted": "2020/04/05"
+}

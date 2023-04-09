@@ -1,0 +1,76 @@
+
+class Option(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey(
+        'product.id'), nullable=False)
+    option_name = db.Column(db.String(10), unique=True, nullable=False)
+    create_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    update_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    active = db.Column(db.Boolean, nullable=False, default=True)
+    version = db.Column(db.Integer, default=0)
+
+
+class OptionValue(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    option_id = db.Column(db.Integer, db.ForeignKey(
+        'option.id'), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(
+        'product.id'), nullable=False)
+    value_name = db.Column(db.String(10), nullable=False)
+    create_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    update_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    active = db.Column(db.Boolean, nullable=False, default=True)
+    version = db.Column(db.Integer, default=0)
+
+
+class ProductSku(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey(
+        'product.id'), nullable=False)
+    sku = db.Column(db.String(10), unique=True, nullable=False)
+    price = db.Column(db.Float, default=0)
+    quantity = db.Column(db.Integer, default=0)
+    create_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    update_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    active = db.Column(db.Boolean, nullable=False, default=True)
+    version = db.Column(db.Integer, default=0)
+
+
+class SkuValue(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    option_id = db.Column(db.Integer, db.ForeignKey(
+        'option.id'), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(
+        'product.id'), nullable=False)
+    sku_id = db.Column(db.Integer, db.ForeignKey(
+        'product_sku.id'), nullable=False)
+    value_id = db.Column(db.Integer, db.ForeignKey(
+        'option_value.id'), nullable=False)
+
+class MerchantAccess(db.Model):
+    __tablename__ = "merchant_access"
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey(
+        'user.id', onupdate='cascade', ondelete='cascade'))
+    merchant_id = db.Column(db.Integer, db.ForeignKey(
+        'merchant.id', onupdate='cascade', ondelete='cascade'))
+class ProductMerchant(db.Model):
+    product_id = db.Column(db.BigInteger, db.ForeignKey(
+        'product.id'), nullable=False, primary_key=True)
+    merchant_id = db.Column(db.Integer, db.ForeignKey(
+        'merchant.id'), nullable=False)
+
+class Merchant(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    region_id = db.Column(db.Integer, db.ForeignKey(
+        'region.id'), nullable=False)
+    merchant_name = db.Column(db.String(50), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_access = db.relationship(
+        'MerchantAccess', backref='author', lazy=True)
+    product_id = db.Column(db.BigInteger, db.ForeignKey(
+        'product.id'))    
+    create_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    update_ts = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    active = db.Column(db.Boolean, nullable=False, default=True)
+    version = db.Column(db.Integer, default=0)

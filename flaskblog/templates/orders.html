@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+  <div class="col col-sm-auto">
+    <div class="content-section">
+      <form method="POST" action="/orders">
+        <div class="form-group">
+            <p>Title: </p> <input name = "title" value="{{ request.form.search}}" type = "text" class="text">
+        </div>
+        <div class="form-group">
+            <p>Author: </p> <input name = "author" type = "text" class="text"> 
+        </div>
+        <div class="form-group">
+            <p>Post Date: </p> <input name = "date_posted" type = "text" class="text">
+        </div>
+        <input class="btn btn-success btn-sm mb-1" type=submit value=Search>
+    </form>
+    </div>
+  </div>
+
+ 
+  <div class="col-lg">
+    <table  style="table-layout:fixed;" class="gridtable"  id="Select-b">
+      <thead>
+        <tr>
+          <th scope="col" width="200px">Order</th>
+          <th scope="col" width="100px">username</th>
+          <th scope="col" width="150px">phone</th>
+          <th scope="col" width="200px">address</th>
+          <th scope="col" width="100px">comment</th>
+          <th scope="col" width="100px">Order status</th>
+          <th scope="col" width="450px">Order items
+          <table  style="table-layout:fixed;" class="gridtable"  id="Select-b">
+            <thead>
+              <tr>
+                <th scope="col" width="50px">id</th>
+                <th scope="col" width="200px">product</th>
+                <th scope="col" width="100px">quantity</th>
+                <th scope="col" width="100px">price</th>
+              </tr>
+            </thead>
+          </table>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in result %}
+        <tr> 
+          <td scope="row" >{{i.order[0].id}}</td>
+          <td id="appadd"> {{ i.order[1].username }}</td>
+          <td id="appadd"> {{ i.order[0].phone }}</td>
+          <td width="200px"> {{ i.order[0].address }}</td>
+          <td width="100px"> {{ i.order[0].comment }}</td>
+          <td > {{ i.order[0].status }}</td>
+          <td>
+              {% for item in i.order_items %}
+                <table class="order-item">
+                  <tr> 
+                    <td scope="row" width="50px">{{item[1].id}}</td>
+                    <td  width="200px"> {{ item[1].product_name }}</a></td>
+                    <td  width="100px"> {{ item[0].quantity }}</td>
+                    <td  width="100px"> {{ item[0].price }} <b>$</b></td>
+                  </tr>
+                </table>
+              {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+       
+    </table> 
+         
+  </div>
+</div>
+{% endblock %}
+
+{% block endbody %} 
+  </div>
+    
+</div> 
+
+
+{% endblock %}

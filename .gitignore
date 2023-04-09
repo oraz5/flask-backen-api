@@ -1,0 +1,6 @@
+venv/
+.git
+.vscode
+.env
+error.log
+node_modules

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="content-section">
+    <form method="POST" action="" enctype=multipart/form-data>
+    <fieldset class="form-group">
+        <div class="form-group">
+                    <label class="form-control-label" for="category">Choose parent category</label>
+                    <select  class="form-control" name="parent_category" id="parent_category">
+                    <option value="0">root</option>
+                    {% for category in categories %}
+                    {%if category.parent_category==0 %}
+                    <option value="{{category.id}}">{{category.category_name_tm}}</option>
+                    {% endif %}
+                    {% endfor %}   
+                    </select> 
+        </div> 
+        <div class="form-group">
+            <label class="form-control-label" for="category">Category name TM</label>
+            <input  class="form-control" name="category_name_tm" id="category_name_tm"/>
+        </div> 
+        <div class="form-group">
+            <label class="form-control-label" for="category">Category name RU</label>
+            <input  class="form-control" name="category_name_ru" id="category_name_ru"/>
+        </div> 
+        <div class="form-group">
+            <label class="form-control-label" for="category">Category picture file</label>
+            <input  class="form-control" type="file" name="picture_file"/>
+        </div> 
+        <div class="form-group">
+            <label class="form-control-label" for="category">Category icon file</label>
+            <input  class="form-control" type="file" name="icon_file"/>
+        </div> 
+        <div class="form-group">
+            <input  class="form-control" type="submit" value="POST"/>
+        </div> 
+    </fieldset>
+    {% endblock %}

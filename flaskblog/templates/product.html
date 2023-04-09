@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+  <article class="container">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="{{url_for('account')}}">{{ product.author.username }}</a>
+        <small class="text-muted">{{ product.date_posted.strftime('%Y-%m-%d') }}</small>
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_product', product_id=product.id) }}">Update</a>
+            <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete </button>
+            <a class="mr-3" href="{{ url_for('products', category_id=product.category_id) }}">{{ product.category.category_name_tm }}</a>
+          </div>
+          
+      </div>
+      <h2 class="article-title">{{ product.product_name }}</h2>
+      <p class="article-content">{{ product.description_tm }}</p>
+      <p class="article-content"><span style="font-weight:bold">Bahasy</span> {{ product.price }}  $</p>
+      {% if product.large_name %}
+       {% for image in images %}
+       <img class="post_image" src="/{{ image }}">
+        {% endfor %}
+      {% endif %}
+    </div>
+  </article>
+  <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <form action="{{ url_for('delete_product', product_id=product.id) }}" method="POST">
+            <input class="btn btn-danger" type="submit" value="Delete">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
